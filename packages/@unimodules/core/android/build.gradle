@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 apply plugin: 'maven'
 
 group = 'org.unimodules'
@@ -52,4 +53,8 @@ android {
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
   }
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
 }

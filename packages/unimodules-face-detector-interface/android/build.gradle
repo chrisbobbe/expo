@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 apply plugin: 'maven'
 
 group = 'org.unimodules'
@@ -54,4 +55,8 @@ if (new File(rootProject.projectDir.parentFile, 'package.json').exists()) {
   throw new GradleException(
       "'unimodules-core.gradle' was not found in the usual React Native dependency location. " +
           "This package can only be used in such projects. Are you sure you've installed the dependencies properly?")
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
 }

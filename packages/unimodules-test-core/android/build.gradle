@@ -66,4 +66,6 @@ dependencies {
   api 'androidx.test:core:1.2.0'
   api 'junit:junit:4.12'
   api 'io.mockk:mockk:1.9.3'
+
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
 }

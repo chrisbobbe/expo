@@ -10,6 +10,7 @@ def safeExtGet(prop, fallback) {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 apply plugin: 'maven'
 
 buildscript {
@@ -27,9 +28,6 @@ buildscript {
     }
   }
 }
-
-apply plugin: 'com.android.library'
-apply plugin: 'maven'
 
 android {
   compileSdkVersion safeExtGet('compileSdkVersion', DEFAULT_COMPILE_SDK_VERSION)
@@ -79,4 +77,6 @@ dependencies {
 
   api 'com.github.bumptech.glide:okhttp3-integration:4.11.0'
   api "com.squareup.okhttp3:okhttp:${safeExtGet("okHttpVersion", DEFAULT_OKHTTP_VERSION)}"
+
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
 }

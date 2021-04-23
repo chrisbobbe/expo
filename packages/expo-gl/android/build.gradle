@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 apply plugin: 'maven'
 
 group = 'host.exp.exponent'
@@ -65,4 +66,6 @@ dependencies {
   unimodule 'expo-gl-cpp'
   unimodule 'unimodules-core'
   unimodule 'unimodules-camera-interface'
+
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
 }

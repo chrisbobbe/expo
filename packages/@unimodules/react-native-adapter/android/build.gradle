@@ -14,8 +14,8 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven'
 
 group = 'org.unimodules'
 version = '6.2.2'
@@ -78,5 +78,4 @@ dependencies {
   implementation 'com.facebook.react:react-native:+'
 
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${safeExtGet('kotlinVersion', '1.4.21')}"
-
 }
