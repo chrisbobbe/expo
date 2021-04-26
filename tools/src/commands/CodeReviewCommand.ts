@@ -1,6 +1,6 @@
 import { Command } from '@expo/commander';
 
-import { reviewPullRequestAsync } from '../code-review';
+import { reviewPullRequestAsync } from '../code-review/code-review';
 
 type ActionOptions = {
   pr: string;
